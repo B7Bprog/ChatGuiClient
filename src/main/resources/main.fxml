@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneController">
+   <children>
+      <Label layoutX="42.0" layoutY="12.0" prefHeight="26.0" prefWidth="112.0" text="Chat by Bela">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="message" disable="true" layoutX="38.0" layoutY="106.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="382.0" promptText="Type message here" />
+      <Button fx:id="send" disable="true" layoutX="426.0" layoutY="105.0" mnemonicParsing="false" onAction="#sendMessage" text="Send">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ScrollPane layoutX="38.0" layoutY="149.0" prefHeight="214.0" prefWidth="430.0">
+        <content>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="5000.0" prefWidth="410.0">
+               <children>
+                  <Label fx:id="display" alignment="TOP_LEFT" layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="5000.0" prefWidth="410.0" wrapText="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="exit" layoutX="443.0" layoutY="13.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="24.0" text="X">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="name" layoutX="38.0" layoutY="60.0" prefHeight="25.0" prefWidth="201.0" promptText="Type your name here" />
+      <Button fx:id="connect" layoutX="268.0" layoutY="60.0" mnemonicParsing="false" onAction="#connect" prefHeight="25.0" prefWidth="201.0" text="Connect">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Circle fx:id="sign" fill="RED" layoutX="142.0" layoutY="26.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
